@@ -3,23 +3,12 @@ import styled from "styled-components";
 export const MainF = styled.main`
   max-width: 100%;
   height: 90.5vh;
-  //display: flex;
-  //justify-content: center;
-  .icons-l{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     div{
-        font-size: 1.5rem;
-        color: #696969;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        opacity: 0.5;
-        &:hover{
-           color: #87cefa;
-        }
-     }
+  .select-S {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    cursor: pointer;
   }
 `;
 
@@ -27,31 +16,59 @@ export const MContainer = styled.div`
   height: 100%;
   width: 95%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+
+  .icons-l {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.05s ease;
+    div {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+      cursor: pointer;
+      color: white;
+      opacity: 0.8;
+      transition: all 1s ease;
+      &:hover {
+        transform: scale(1.2);
+        transition: all 0.05s ease;
+      }
+    }
+  }
   .profile {
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 7rem;
+    background-image: url("https://ae01.alicdn.com/kf/HTB15hV_LXXXXXXrXFXXq6xXFXXXE/Adesivo-de-vinil-engra-ado-com-desenho-de-gato-9-18cm-decalque-de-carro-estilo-adesivos.jpg");
+    background-repeat: no-repeat;
+    background-size: 700px 900px;
+    background: #0a0c10;
     .info-name {
-      margin-top: 4rem;
       h2 {
         font-size: 4rem;
+        color: white;
+        letter-spacing: 5px;
         strong {
           margin-left: 1rem;
-          color: #87cefa;
+          color: #cc0000;
         }
         margin: 0;
       }
       p {
-        font-weight: 400;
-        font-size: 1.2rem;
-        color: #696969;
-        letter-spacing: 2px;
-        font-family: "Special Elite", cursive;
-        border-right: 2px solid #696969;
-        max-width: 299px;
+        font-weight: 100;
+        font-size: 1.3rem;
+        color: white;
+        border-right: 2px solid white;
         white-space: nowrap;
         overflow: hidden;
+        opacity: 0.6;
+        max-width: 200px;
       }
       .typing-animation {
         animation: blinkCursor 500ms infinite normal,
@@ -59,7 +76,7 @@ export const MContainer = styled.div`
       }
       @keyframes blinkCursor {
         from {
-          border-right: 2px solid #696969;
+          border-right: 2px solid white;
         }
         to {
           border-right: transparent;
@@ -67,7 +84,7 @@ export const MContainer = styled.div`
       }
       @keyframes typing {
         from {
-          width: 0;
+          width: 0%;
         }
         to {
           width: 100%;
@@ -75,15 +92,24 @@ export const MContainer = styled.div`
       }
     }
     button {
+      transition: all 0.05s ease;
+      margin-top: 2rem;
       border: none;
-      background: #87cefa;
-      color: white;
-      width: 30%;
-      height: 2.5rem;
-      font-weight: 700;
-      font-size: 1rem;
-      box-shadow: 0px 1px 5px #87cefa;
+      //background: red;
+      background: transparent;
+      border: 3px solid red;
+      width: 35%;
+      height: 3rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
       cursor: pointer;
+      background: red;
+      color: white;
+      letter-spacing: 5px;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
   .text-information {
@@ -95,13 +121,80 @@ export const MContainer = styled.div`
 `;
 export const SectionF = styled.section`
   max-width: 100%;
-  height: 35rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-`
+  align-items: center;
+  flex-direction: column;
+  background: rgb(4, 14, 22);
+  h2 {
+    margin-top: 4rem;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+`;
 export const SectionContainer = styled.div`
-  background: yellow;
-  width: 90%;
+  margin-top: 3rem;
+  width: 95%;
   height: 100%;
-`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  .name-skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    h3 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+  }
+  .card-M {
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    box-shadow: 0px 3px 15px rgb(4, 14, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid red;
+    border-radius: 0.5rem;
+    //background: rgb(4, 17, 25);
+    background: white;
+    .card-C {
+      width: 90%;
+      height: 90%;
+      transition: all 1s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+      .card-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        img{
+          width: 35%;
+        }
+        span {
+          font-size: 1.75rem;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 40px;
+          z-index: 10;
+          color: black;
+        }
+        p {
+          margin-top: 1rem;
+          text-transform: capitalize;
+          font-weight: 700;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+`;

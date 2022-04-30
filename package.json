@@ -14,6 +14,8 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@styled-icons/bootstrap": "^10.34.0",
+    "@styled-icons/boxicons-logos": "^10.38.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
