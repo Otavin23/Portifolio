@@ -1,11 +1,8 @@
 import React from "react";
 import * as S from "./style";
-import {
-  GrFacebookOption,
-  GrGithub,
-  GrLinkedinOption,
-} from "react-icons/gr";
+import { GrFacebookOption, GrGithub, GrLinkedinOption } from "react-icons/gr";
 import { ChevronDown } from "@styled-icons/bootstrap";
+import ecommerce from "../../assets/ecommerce.jpg";
 
 const MainF = () => {
   return (
@@ -35,7 +32,7 @@ const MainF = () => {
       </S.MContainer>
 
       <div className="select-S">
-        <ChevronDown width="50" height={"50"} color="#f1f1f1" />
+        <ChevronDown width="30" height="30" color="#f1f1f1" />
       </div>
 
       <S.SectionF>
@@ -44,7 +41,7 @@ const MainF = () => {
           <div className="card-M">
             <div className="card-C">
               <div className="card-logo">
-                <img 
+                <img
                   id="img"
                   src={
                     "https://www.heitorfranco.com/_next/image?url=https%3A%2F%2Fportfolio-heitor-franco.cdn.prismic.io%2Fportfolio-heitor-franco%2Ffc4211ec-8519-4151-a19a-04ec094342b4_html5.svg&w=256&q=75"
@@ -97,7 +94,40 @@ const MainF = () => {
         </S.SectionContainer>
       </S.SectionF>
 
-
+      <S.ProjectF>
+        <h2>Project</h2>
+        <S.ProjectContainer>
+          <div className="card-M">
+            <div className="card-C">
+              <div className="logo-p">
+                <img src={ecommerce} alt="ecommerce-loja" />
+                <span>Ecommerce</span>
+              </div>
+            </div>
+          </div>
+          <div className="card-M">
+            <div className="card-C">
+              <div className="logo-p">
+                <img src={ecommerce} alt="ecommerce-loja" />
+              </div>
+            </div>
+          </div>
+          <div className="card-M">
+            <div className="card-C">
+              <div className="logo-p">
+                <img src={ecommerce} alt="ecommerce-loja" />
+              </div>
+            </div>
+          </div>
+          <div className="card-M">
+            <div className="card-C">
+              <div className="logo-p">
+                <img src={ecommerce} alt="ecommerce-loja" />
+              </div>
+            </div>
+          </div>
+        </S.ProjectContainer>
+      </S.ProjectF>
     </S.MainF>
   );
 };

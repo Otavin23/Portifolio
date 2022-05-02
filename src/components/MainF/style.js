@@ -121,6 +121,7 @@ export const MContainer = styled.div`
 `;
 export const SectionF = styled.section`
   max-width: 100%;
+  padding-bottom: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,8 +137,7 @@ export const SectionF = styled.section`
 `;
 export const SectionContainer = styled.div`
   margin-top: 3rem;
-  width: 95%;
-  height: 100%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -153,17 +153,17 @@ export const SectionContainer = styled.div`
     }
   }
   .card-M {
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 200px;
     margin: 0 auto;
-    box-shadow: 0px 3px 15px rgb(4, 14, 22);
+    box-shadow: 0px 10px 15px rgb(4, 11, 22);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid red;
+    //border-bottom: 5px solid red;
     border-radius: 0.5rem;
-    //background: rgb(4, 17, 25);
-    background: white;
+    background: rgb(4, 17, 25);
+    transition-delay: 2s ease;
     .card-C {
       width: 90%;
       height: 90%;
@@ -177,7 +177,7 @@ export const SectionContainer = styled.div`
         align-items: center;
         justify-content: center;
         height: 100%;
-        img{
+        img {
           width: 35%;
         }
         span {
@@ -186,13 +186,68 @@ export const SectionContainer = styled.div`
           text-align: center;
           margin-top: 40px;
           z-index: 10;
-          color: black;
+          color: white;
         }
         p {
           margin-top: 1rem;
           text-transform: capitalize;
           font-weight: 700;
           font-size: 1.4rem;
+        }
+      }
+    }
+  }
+`;
+
+export const ProjectF = styled.section`
+  max-width: 100%;
+  padding-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    margin-top: 4rem;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+`;
+
+export const ProjectContainer = styled.div`
+  margin-top: 3rem;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(4, 17, 25);
+
+
+  .card-M {
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //border-bottom: 5px solid red;
+    border-radius: 0.5rem;
+    //background: white;
+    transition-delay: 2s ease;
+    background: #0a0c10;
+    .card-C{
+      width: 90%;
+      height: 90%;
+      transition: all 1s ease;
+    
+      .logo-p{
+        img{
+          width: 100%;
+
+
         }
       }
     }
