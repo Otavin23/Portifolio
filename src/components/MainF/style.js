@@ -29,7 +29,7 @@ export const MContainer = styled.div`
       margin-bottom: 1rem;
       margin-left: 1.5rem;
       cursor: pointer;
-      color: white;
+      color: black;
       opacity: 0.8;
       transition: all 1s ease;
       &:hover {
@@ -45,15 +45,13 @@ export const MContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-left: 7rem;
-    background-image: url("https://ae01.alicdn.com/kf/HTB15hV_LXXXXXXrXFXXq6xXFXXXE/Adesivo-de-vinil-engra-ado-com-desenho-de-gato-9-18cm-decalque-de-carro-estilo-adesivos.jpg");
-    background-repeat: no-repeat;
-    background-size: 700px 900px;
-    background: #0a0c10;
+
     .info-name {
       h2 {
         font-size: 4rem;
         color: white;
         letter-spacing: 5px;
+        color: black;
         strong {
           margin-left: 1rem;
           color: #cc0000;
@@ -63,12 +61,14 @@ export const MContainer = styled.div`
       p {
         font-weight: 100;
         font-size: 1.3rem;
-        color: white;
+        //color: white;
         border-right: 2px solid white;
         white-space: nowrap;
         overflow: hidden;
         opacity: 0.6;
         max-width: 200px;
+        color: bllack;
+        //z-index: 2;
       }
       .typing-animation {
         animation: blinkCursor 500ms infinite normal,
@@ -76,7 +76,7 @@ export const MContainer = styled.div`
       }
       @keyframes blinkCursor {
         from {
-          border-right: 2px solid white;
+          border-right: 2px solid black;
         }
         to {
           border-right: transparent;
@@ -91,6 +91,7 @@ export const MContainer = styled.div`
         }
       }
     }
+
     button {
       transition: all 0.05s ease;
       margin-top: 2rem;
@@ -117,6 +118,15 @@ export const MContainer = styled.div`
     img {
       max-width: 300px;
     }
+  }
+  .photo-cat{
+    width: 47%;
+    height: 80%;
+    background-image: url("https://images-ext-1.discordapp.net/external/YgjzT5aU_Y_Sw78O77_4NEju49CHY-17mVjEqk2yfyM/https/img.freepik.com/vetores-gratis/gato-personagem-dos-desenhos-animados-icone-gatinho_71328-583.jpg?width=436&height=436");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1; 
   }
 `;
 export const SectionF = styled.section`
@@ -212,19 +222,17 @@ export const ProjectF = styled.section`
     font-size: 40px;
     display: flex;
     justify-content: center;
-    color: white;
+    color: black;
   }
 `;
 
 export const ProjectContainer = styled.div`
   margin-top: 3rem;
-  width: 80%;
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: rgb(4, 17, 25);
-
 
   .card-M {
     width: 350px;
@@ -233,21 +241,66 @@ export const ProjectContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    //border-bottom: 5px solid red;
     border-radius: 0.5rem;
-    //background: white;
     transition-delay: 2s ease;
-    background: #0a0c10;
-    .card-C{
+    //background: rgb(4, 17, 25);
+    margin-bottom: 3rem;
+    background: hsl(0, 98%, 100%);
+    box-shadow: 0px 0px 6px #d3d3d3;
+
+    .card-C {
       width: 90%;
       height: 90%;
-      transition: all 1s ease;
+      transition: all 1s eas e;
+      //background: rgb(4, 17, 25);
+      background: hsl(0, 98%, 100%);
+      .logo-p {
+        img {
+          max-width: 100%;
+          height: 12rem;
+        }
+        span {
+          display: flex;
+          justify-content: center;
+          font-weight: 600;
+          font-size: 1.4rem;
+          margin-top: 1rem;
+          color: black;
+          opacity: 0.7;
+        }
+      }
+      .information-card {
+        margin-top: 1rem;
+        p {
+          color: rgb(115, 115, 115);
+          background-color: transparent;
+          font-family: Heebo, sans-serif;
+          font-weight: 500;
+          line-height: 1.5;
+          font-size: 1.1rem;
+        }
+      }
+      .button-visited{
+        margin-top: 2rem;
+        display:flex;
+        justify-content: space-between;
+        transition: all 1s ease;
+        button{
+          border: none;
+          width: 45%;
+          height: 3rem;
+          background: rgb(237, 44, 73);
+          color: white; 
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+          transition: all 0.05s ease;
+          box-shadow: 0px 0px 3px rgb(237,44,74);
+          &:hover{
+            transform: scale(1.1);
+          }
     
-      .logo-p{
-        img{
-          width: 100%;
-
-
         }
       }
     }

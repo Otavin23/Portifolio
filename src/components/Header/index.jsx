@@ -4,16 +4,9 @@ import * as S from "./style";
 const Header = () => {
   return (
     <S.HeaderF>
-      <div className="name-logo">
+      <div className="name-logo" data-aos="fade-down-right">
         <h1>Otávio</h1>
       </div>
-      <nav>
-        <ul>
-          <li>about</li>
-          <li>portifolio</li>
-          <li>contact</li>
-        </ul>
-      </nav>
     </S.HeaderF>
   );
 };
