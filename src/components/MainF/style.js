@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const MainF = styled.main`
-  max-width: 100%;
+  width: 100%;
   height: 90.5vh;
+  @media (max-width: 836px){
+  }
   .select-S {
     display: flex;
     justify-content: center;
@@ -11,13 +13,14 @@ export const MainF = styled.main`
     cursor: pointer;
   }
 `;
-
 export const MContainer = styled.div`
   height: 100%;
   width: 95%;
   display: flex;
   align-items: center;
-
+  @media (max-width: 836px){
+    width: 100%;
+  }
   .icons-l {
     display: flex;
     flex-direction: column;
@@ -29,7 +32,7 @@ export const MContainer = styled.div`
       margin-bottom: 1rem;
       margin-left: 1.5rem;
       cursor: pointer;
-      color: black;
+      color: white;
       opacity: 0.8;
       transition: all 1s ease;
       &:hover {
@@ -45,13 +48,38 @@ export const MContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-left: 7rem;
-
+    overflow: hidden;
+    @media (max-width: 441px){
+      margin-left: 3rem;
+    }
+    @media (max-width: 356px){
+      width: 200px;
+    }
+    @media (max-width: 700px){
+      width: 500px;
+    }
+    @media (max-width: 459px){
+      margin-left: 2.3rem;
+    }
     .info-name {
+      @media (max-width: 1115px) {
+        max-width: 100%;
+      }
       h2 {
         font-size: 4rem;
         color: white;
         letter-spacing: 5px;
-        color: black;
+        color: white;
+        overflow: hidden;
+        @media (max-width: 529px){
+          font-size: 3rem;
+        }
+        @media (max-width: 441px){
+          font-size: 2.5rem;
+        }
+        @media (max-width: 356px){
+          font-size: 2rem;
+        }
         strong {
           margin-left: 1rem;
           color: #cc0000;
@@ -61,14 +89,12 @@ export const MContainer = styled.div`
       p {
         font-weight: 100;
         font-size: 1.3rem;
-        //color: white;
         border-right: 2px solid white;
         white-space: nowrap;
         overflow: hidden;
         opacity: 0.6;
         max-width: 200px;
-        color: bllack;
-        //z-index: 2;
+        color: white;
       }
       .typing-animation {
         animation: blinkCursor 500ms infinite normal,
@@ -96,7 +122,6 @@ export const MContainer = styled.div`
       transition: all 0.05s ease;
       margin-top: 2rem;
       border: none;
-      //background: red;
       background: transparent;
       border: 3px solid red;
       width: 35%;
@@ -108,6 +133,9 @@ export const MContainer = styled.div`
       background: red;
       color: white;
       letter-spacing: 5px;
+      @media (max-width: 953px) {
+        width: 55%;
+      }
       &:hover {
         transform: scale(1.1);
       }
@@ -119,24 +147,16 @@ export const MContainer = styled.div`
       max-width: 300px;
     }
   }
-  .photo-cat{
-    width: 47%;
-    height: 80%;
-    background-image: url("https://images-ext-1.discordapp.net/external/YgjzT5aU_Y_Sw78O77_4NEju49CHY-17mVjEqk2yfyM/https/img.freepik.com/vetores-gratis/gato-personagem-dos-desenhos-animados-icone-gatinho_71328-583.jpg?width=436&height=436");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 1; 
-  }
 `;
 export const SectionF = styled.section`
-  max-width: 100%;
+  width: 100%;
   padding-bottom: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: rgb(4, 14, 22);
+  overflow: hidden;
   h2 {
     margin-top: 4rem;
     font-size: 40px;
@@ -146,12 +166,14 @@ export const SectionF = styled.section`
   }
 `;
 export const SectionContainer = styled.div`
-  margin-top: 3rem;
-  width: 80%;
+  padding-top: 3rem;
+  width: 90%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
   .name-skill {
     display: flex;
     justify-content: center;
@@ -170,14 +192,15 @@ export const SectionContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    //border-bottom: 5px solid red;
     border-radius: 0.5rem;
     background: rgb(4, 17, 25);
+    margin-bottom: 2rem;
     transition-delay: 2s ease;
     .card-C {
       width: 90%;
       height: 90%;
       transition: all 1s ease;
+
       &:hover {
         transform: scale(1.1);
       }
@@ -208,24 +231,22 @@ export const SectionContainer = styled.div`
     }
   }
 `;
-
 export const ProjectF = styled.section`
-  max-width: 100%;
+  width: 100%;
   padding-bottom: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  background: #0a0c10;
   h2 {
     margin-top: 4rem;
     font-size: 40px;
     display: flex;
     justify-content: center;
-    color: black;
+    color: white;
   }
 `;
-
 export const ProjectContainer = styled.div`
   margin-top: 3rem;
   width: 95%;
@@ -239,21 +260,25 @@ export const ProjectContainer = styled.div`
     height: 500px;
     margin: 0 auto;
     display: flex;
+    @media (max-width: 425px){
+      width: 320px;
+      height: 500px;
+    }
+    @media (max-width: 320px){
+      width: 270px;
+      height: 540px;
+    }
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
     transition-delay: 2s ease;
-    //background: rgb(4, 17, 25);
     margin-bottom: 3rem;
-    background: hsl(0, 98%, 100%);
-    box-shadow: 0px 0px 6px #d3d3d3;
-
+    background: rgb(4, 17, 25);
+    box-shadow: 0px 10px 15px rgb(4, 11, 22);
     .card-C {
       width: 90%;
       height: 90%;
       transition: all 1s eas e;
-      //background: rgb(4, 17, 25);
-      background: hsl(0, 98%, 100%);
       .logo-p {
         img {
           max-width: 100%;
@@ -265,44 +290,60 @@ export const ProjectContainer = styled.div`
           font-weight: 600;
           font-size: 1.4rem;
           margin-top: 1rem;
-          color: black;
+          color: white;
           opacity: 0.7;
         }
       }
       .information-card {
         margin-top: 1rem;
         p {
-          color: rgb(115, 115, 115);
+          color: white;
           background-color: transparent;
           font-family: Heebo, sans-serif;
           font-weight: 500;
           line-height: 1.5;
           font-size: 1.1rem;
+          opacity: 0.5;
         }
       }
-      .button-visited{
+      .button-visited {
         margin-top: 2rem;
-        display:flex;
+        display: flex;
         justify-content: space-between;
         transition: all 1s ease;
-        button{
+        button {
           border: none;
           width: 45%;
           height: 3rem;
           background: rgb(237, 44, 73);
-          color: white; 
+          color: white;
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 1px;
           cursor: pointer;
           transition: all 0.05s ease;
-          box-shadow: 0px 0px 3px rgb(237,44,74);
-          &:hover{
+          box-shadow: 0px 0px 3px rgb(237, 44, 74);
+          &:hover {
             transform: scale(1.1);
           }
-    
         }
       }
     }
+  }
+`;
+
+export const Contact = styled.section`
+  width: 100%;
+  height: 15%;
+  background: rgb(4, 14, 22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ContactContainer = styled.div`
+  h2 {
+    color: white;
+    font-size: 1.3rem;
   }
 `;

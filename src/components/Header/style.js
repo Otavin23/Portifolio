@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderF = styled.header`
-  max-width: 100%;
+  width: 100%;
   height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #0a0c10;
-
-  position:fixed;
-  width: 100%;
-  z-index: 2;
+  background: rgb(4, 14, 22);
   height: 4rem;
   .name-logo {
     margin-left: 2.5rem;

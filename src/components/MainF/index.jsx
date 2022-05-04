@@ -42,11 +42,10 @@ const MainF = () => {
           </div>
           <button>Learn More</button>
         </div>
-        <div className="photo-cat"></div>
       </S.MContainer>
 
       <div className="select-S">
-        <ChevronDown width="30" height="30" color="#333333" />
+        <ChevronDown width="35" height="35" color="#616161" />
       </div>
 
       <S.SectionF>
@@ -235,6 +234,13 @@ const MainF = () => {
           </div>
         </S.ProjectContainer>
       </S.ProjectF>
+
+      <S.Contact>
+        <S.ContactContainer>
+          <h2>Made with ❤️ by Otavio Vieira</h2>
+        </S.ContactContainer>
+      </S.Contact>
+
     </S.MainF>
   );
 };
