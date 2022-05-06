@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@styled-icons/heroicons-solid": "^10.36.0",
     "aos": "^3.0.0-beta.6",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

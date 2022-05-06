@@ -2,34 +2,63 @@ import React, { useEffect } from "react";
 import * as S from "./style";
 import { GrFacebookOption, GrGithub, GrLinkedinOption } from "react-icons/gr";
 import { ChevronDown } from "@styled-icons/bootstrap";
-import ecommerce from "../../assets/ecommerce.jpg";
-import calculator from "../../assets/calculadora.jpg";
-import github from "../../assets/github.jpg";
-import where from "../../assets/where.jpg";
-import todoList from "../../assets/todo.jpg";
-import newbie from "../../assets/newbie.jpg";
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Moon } from "@styled-icons/heroicons-solid/Moon";
+import ecommerce from "../../assets/ecommerce.jpeg";
+import calculator from "../../assets/calculadora.jpeg";
+import github from "../../assets/github.jpeg";
+import where from "../../assets/where.jpeg";
+import todoList from "../../assets/todo.jpeg";
+import newbie from "../../assets/newbie.jpeg";
+import "aos/dist/aos.css";
 import Aos from "aos";
 
-const MainF = () => {
-  //Teste one
+const MainF = ({ theme, setTheme }) => {
   useEffect(() => {
-    Aos.init({})
+    Aos.init({
+      duration: 2000,
+    });
   }, []);
+
+  function ChangeTheme() {
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  }
 
   return (
     <S.MainF>
       <S.MContainer>
         <div className="icons-l" data-aos="fade-right">
-          <div>
-            <GrGithub />
-          </div>
-          <div>
-            <GrFacebookOption />
-          </div>
-          <div>
-            <GrLinkedinOption />
-          </div>
+          <nav>
+            <ul>
+              <li>
+                <GrFacebookOption />
+              </li>
+              <li>
+                <a href="https://github.com/Otavin23">
+                  <GrGithub />
+                </a>
+              </li>
+              <li>
+                <GrLinkedinOption />
+              </li>
+              <li>
+                <button onClick={ChangeTheme}>
+                  {theme == "light" ? (
+                    <>
+                      <Moon width="30" height="30" color="#000" />
+                    </>
+                  ) : (
+                    <>
+                      <Moon width="30" height="30" color="#Fff" />
+                    </>
+                  )}
+                </button>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         <div className="profile" data-aos="fade-left" data-aos-duration="2000">
@@ -43,15 +72,13 @@ const MainF = () => {
           <button>Learn More</button>
         </div>
       </S.MContainer>
-
       <div className="select-S">
         <ChevronDown width="35" height="35" color="#616161" />
       </div>
-
       <S.SectionF>
         <h2 data-aos="fade-up">Skills</h2>
         <S.SectionContainer>
-          <div className="card-M" data-aos="fade-right" >
+          <div className="card-M" data-aos="fade-right">
             <div className="card-C">
               <div className="card-logo">
                 <img
@@ -66,7 +93,7 @@ const MainF = () => {
             </div>
           </div>
 
-          <div className="card-M" data-aos="fade-up">
+          <div className="card-M" data-aos="fade-down-right">
             <div className="card-C">
               <div className="card-logo">
                 <img
@@ -80,7 +107,7 @@ const MainF = () => {
             </div>
           </div>
 
-          <div className="card-M" data-aos="fade-up">
+          <div className="card-M" data-aos="fade-down-left">
             <div className="card-C">
               <div className="card-logo">
                 <img
@@ -109,7 +136,6 @@ const MainF = () => {
           </div>
         </S.SectionContainer>
       </S.SectionF>
-
       <S.ProjectF>
         <h2 data-aos="fade-up">Project</h2>
         <S.ProjectContainer>
@@ -129,8 +155,16 @@ const MainF = () => {
               </div>
 
               <div className="button-visited">
-                <button>preview site</button>
-                <button> view code</button>
+                <button>
+                  <a href="https://dashing-pothos-a7d409.netlify.app/">
+                    preview site
+                  </a>
+                </button>
+                <button>
+                  <a href="https://github.com/Otavin23/EcoommerceProject">
+                    view code
+                  </a>
+                </button>
               </div>
             </div>
           </div>
@@ -148,8 +182,16 @@ const MainF = () => {
                 </p>
               </div>
               <div className="button-visited">
-                <button>preview site</button>
-                <button> view code</button>
+                <button>
+                  <a href="https://tiny-sopapillas-c14523.netlify.app/">
+                    preview site
+                  </a>
+                </button>
+                <button>
+                  <a href="https://github.com/Otavin23/Calculadora-app-Front-end">
+                    view code
+                  </a>
+                </button>
               </div>
             </div>
           </div>
@@ -234,13 +276,11 @@ const MainF = () => {
           </div>
         </S.ProjectContainer>
       </S.ProjectF>
-
       <S.Contact>
         <S.ContactContainer>
           <h2>Made with ❤️ by Otavio Vieira</h2>
         </S.ContactContainer>
       </S.Contact>
-
     </S.MainF>
   );
 };

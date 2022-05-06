@@ -6,7 +6,7 @@ export const HeaderF = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgb(4, 14, 22);
+  background: ${props => props.theme.colors.bodyHeader};
   height: 4rem;
   .name-logo {
     margin-left: 2.5rem;
@@ -15,7 +15,7 @@ export const HeaderF = styled.header`
     justify-content: space-between;
     cursor: pointer;
     h1 {
-    color: white;
+    color: ${props => props.theme.colors.fontHeader};
       font-weight: 800;
       font-size: 26px;
       letter-spacing: 2px;

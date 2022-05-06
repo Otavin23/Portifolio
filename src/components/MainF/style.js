@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainF = styled.main`
   width: 100%;
   height: 90.5vh;
-  @media (max-width: 836px){
+  @media (max-width: 836px) {
   }
   .select-S {
     display: flex;
@@ -18,7 +18,7 @@ export const MContainer = styled.div`
   width: 95%;
   display: flex;
   align-items: center;
-  @media (max-width: 836px){
+  @media (max-width: 836px) {
     width: 100%;
   }
   .icons-l {
@@ -27,17 +27,29 @@ export const MContainer = styled.div`
     align-items: center;
     justify-content: center;
     transition: all 0.05s ease;
-    div {
-      font-size: 1.7rem;
-      margin-bottom: 1rem;
-      margin-left: 1.5rem;
-      cursor: pointer;
+
+    ul {
+      display: flex;
+      flex-direction: column;
       color: white;
+      font-size: 1.7rem;
+      cursor: pointer;
+      color: ${(props) => props.theme.colors.fontHeader};
       opacity: 0.8;
-      transition: all 1s ease;
-      &:hover {
-        transform: scale(1.2);
-        transition: all 0.05s ease;
+      list-style: none;
+      li {
+        margin-bottom: 0.5rem;
+        margin-left: 1.5rem;
+        transition: all 1s ease;
+        &:hover {
+          transform: scale(1.2);
+          transition: all 0.05s ease;
+        }
+        button {
+          border: none;
+          background: transparent;
+          color: white;
+        }
       }
     }
   }
@@ -49,16 +61,16 @@ export const MContainer = styled.div`
     justify-content: center;
     margin-left: 7rem;
     overflow: hidden;
-    @media (max-width: 441px){
+    @media (max-width: 441px) {
       margin-left: 3rem;
     }
-    @media (max-width: 356px){
+    @media (max-width: 356px) {
       width: 200px;
     }
-    @media (max-width: 700px){
+    @media (max-width: 700px) {
       width: 500px;
     }
-    @media (max-width: 459px){
+    @media (max-width: 459px) {
       margin-left: 2.3rem;
     }
     .info-name {
@@ -66,20 +78,10 @@ export const MContainer = styled.div`
         max-width: 100%;
       }
       h2 {
-        font-size: 4rem;
-        color: white;
+        color: ${(props) => props.theme.colors.fontHeader};
         letter-spacing: 5px;
-        color: white;
         overflow: hidden;
-        @media (max-width: 529px){
-          font-size: 3rem;
-        }
-        @media (max-width: 441px){
-          font-size: 2.5rem;
-        }
-        @media (max-width: 356px){
-          font-size: 2rem;
-        }
+        font-size: clamp(2rem, 8vw, 4rem);
         strong {
           margin-left: 1rem;
           color: #cc0000;
@@ -94,7 +96,7 @@ export const MContainer = styled.div`
         overflow: hidden;
         opacity: 0.6;
         max-width: 200px;
-        color: white;
+        color: ${(props) => props.theme.colors.fontHeader};
       }
       .typing-animation {
         animation: blinkCursor 500ms infinite normal,
@@ -102,7 +104,7 @@ export const MContainer = styled.div`
       }
       @keyframes blinkCursor {
         from {
-          border-right: 2px solid black;
+          border-right: 2px solid ${(props) => props.theme.colors.fontHeader};
         }
         to {
           border-right: transparent;
@@ -155,14 +157,14 @@ export const SectionF = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(4, 14, 22);
+  background: ${(props) => props.theme.colors.bodyHeader};
   overflow: hidden;
   h2 {
     margin-top: 4rem;
     font-size: 40px;
     display: flex;
     justify-content: center;
-    color: white;
+    color: ${(props) => props.theme.colors.fontHeader};
   }
 `;
 export const SectionContainer = styled.div`
@@ -188,12 +190,12 @@ export const SectionContainer = styled.div`
     width: 250px;
     height: 200px;
     margin: 0 auto;
-    box-shadow: 0px 10px 15px rgb(4, 11, 22);
+    box-shadow: 0px 1px 15px ${(props) => props.theme.colors.shadowCard};
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
-    background: rgb(4, 17, 25);
+    background: ${(props) => props.theme.colors.bodyHeader};
     margin-bottom: 2rem;
     transition-delay: 2s ease;
     .card-C {
@@ -219,7 +221,7 @@ export const SectionContainer = styled.div`
           text-align: center;
           margin-top: 40px;
           z-index: 10;
-          color: white;
+          color: ${(props) => props.theme.colors.fontHeader};
         }
         p {
           margin-top: 1rem;
@@ -238,13 +240,13 @@ export const ProjectF = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #0a0c10;
+  background: ${(props) => props.theme.colors.bodyCard};
   h2 {
     margin-top: 4rem;
     font-size: 40px;
     display: flex;
     justify-content: center;
-    color: white;
+    color: ${(props) => props.theme.colors.fontHeader};
   }
 `;
 export const ProjectContainer = styled.div`
@@ -260,11 +262,11 @@ export const ProjectContainer = styled.div`
     height: 500px;
     margin: 0 auto;
     display: flex;
-    @media (max-width: 425px){
+    @media (max-width: 425px) {
       width: 320px;
       height: 500px;
     }
-    @media (max-width: 320px){
+    @media (max-width: 320px) {
       width: 270px;
       height: 540px;
     }
@@ -273,8 +275,8 @@ export const ProjectContainer = styled.div`
     border-radius: 0.5rem;
     transition-delay: 2s ease;
     margin-bottom: 3rem;
-    background: rgb(4, 17, 25);
-    box-shadow: 0px 10px 15px rgb(4, 11, 22);
+    background: ${(props) => props.theme.colors.bodyCard};
+    box-shadow: 0px 1px 15px ${(props) => props.theme.colors.shadowCard};
     .card-C {
       width: 90%;
       height: 90%;
@@ -290,14 +292,14 @@ export const ProjectContainer = styled.div`
           font-weight: 600;
           font-size: 1.4rem;
           margin-top: 1rem;
-          color: white;
+          color: ${(props) => props.theme.colors.fontHeader};
           opacity: 0.7;
         }
       }
       .information-card {
         margin-top: 1rem;
         p {
-          color: white;
+          color: ${(props) => props.theme.colors.fontHeader};
           background-color: transparent;
           font-family: Heebo, sans-serif;
           font-weight: 500;
@@ -316,15 +318,25 @@ export const ProjectContainer = styled.div`
           width: 45%;
           height: 3rem;
           background: rgb(237, 44, 73);
-          color: white;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 1px;
           cursor: pointer;
           transition: all 0.05s ease;
           box-shadow: 0px 0px 3px rgb(237, 44, 74);
+          color: white;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          cursor: pointer;
+          font-weight: 700;
+          text-decoration: none;
           &:hover {
             transform: scale(1.1);
+          }
+          a {
+            color: white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
           }
         }
       }
@@ -335,7 +347,7 @@ export const ProjectContainer = styled.div`
 export const Contact = styled.section`
   width: 100%;
   height: 15%;
-  background: rgb(4, 14, 22);
+  background: ${(props) => props.theme.colors.bodyHeader};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,7 +355,7 @@ export const Contact = styled.section`
 
 export const ContactContainer = styled.div`
   h2 {
-    color: white;
+    color: ${(props) => props.theme.colors.fontHeader};
     font-size: 1.3rem;
   }
 `;
