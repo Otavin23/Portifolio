@@ -12,7 +12,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Aos from "aos";
 
 const MainF = () => {
-
+  //Teste one
   useEffect(() => {
     Aos.init({})
   }, []);
